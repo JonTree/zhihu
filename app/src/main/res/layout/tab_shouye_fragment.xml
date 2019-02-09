@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shouye_linear_shape"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <SearchView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="6dp"
+                    android:background="#BFBFBF"></View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/id_picture_ask"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/community_editor_ic_feed_ask" />
+
+                    <TextView
+                        android:id="@+id/shouye_ask_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/id_picture_ask"
+                        android:layout_alignBottom="@id/id_picture_ask"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:text="提问"
+                        android:textColor="#656565"
+                        android:textSize="18sp"
+                        android:clickable="true"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:tabIndicatorColor="#1C1C1C"
+            app:tabSelectedTextColor="#1C1C1C"
+            app:tabTextColor="#9A9A9A"></android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/shouye_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>
