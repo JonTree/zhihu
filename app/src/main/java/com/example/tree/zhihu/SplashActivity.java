@@ -38,14 +38,15 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    sleep(2000);//使程序休眠五秒
+                    sleep(500);//使程序休眠五秒
                     Message message = new Message();
                     message.what = 1;
                     handler.sendMessage(message);
-                    sleep(2000);
+                    sleep(1000);
                     Message message1 = new Message();
                     message1.what = 2;
                     handler.sendMessage(message1);
+                    sleep(1000);
                     Intent it=new Intent(getApplicationContext(),MainActivity.class);//启动MainActivity
                     startActivity(it);
                     finish();//关闭当前活动
