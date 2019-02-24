@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.fragment.shouye.AttentionFragment;
 import com.example.tree.zhihu.fragment.shouye.HotListFragment;
 import com.example.tree.zhihu.fragment.shouye.RecommendFragment;
+import com.example.tree.zhihu.tool.BasePageFragment;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,13 +34,15 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class ShouyeFragment extends Fragment implements View.OnClickListener{
+public class ShouyeFragment extends BasePageFragment implements View.OnClickListener{
 
     ViewPager viewPager;
     EditText historicalYear;
     EditText historicalMonth;
     EditText historicalDay;
     TextView te_ask;
+    LinearLayout mLinearLayout;
+
 
     StringBuilder historicalDate;
 
@@ -74,6 +78,8 @@ public class ShouyeFragment extends Fragment implements View.OnClickListener{
                 return false;
             }
         };
+        //找到底部tab的布局
+        mLinearLayout = (LinearLayout)getActivity().findViewById(R.id.bottom_tabs);
         historicalDay = (EditText) view.findViewById(R.id.historical_day);
         historicalDay.setOnClickListener(this);
         historicalDay.setOnKeyListener(onKeyListener);
@@ -224,6 +230,11 @@ public class ShouyeFragment extends Fragment implements View.OnClickListener{
             ((RecommendFragment)getChildFragmentManager().getFragments().get(1)).setPastNewsUrl(News.getNewsUrl(getTheRealUrlSuffix(historicalDate)));
             tabLayout.getTabAt(1).select();
         }
+    }
+
+    @Override
+    public void fetchData() {
+        mLinearLayout.setVisibility(View.GONE);
     }
 
     //ViewPager适配器
