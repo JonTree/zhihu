@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_tabs"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/id_tab_shouye"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/id_bu_shouye_img"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_bottomtabbar_feed" />
+
+        <TextView
+            android:id="@+id/shouye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News"
+            android:textColor="#9A9A9A" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_tab_idear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/id_bu_idear_img"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_bottomtabbar_idear_blue" />
+
+        <TextView
+            android:id="@+id/idear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="讨论"
+            android:textColor="#9A9A9A" />
+    </LinearLayout>
+</LinearLayout>

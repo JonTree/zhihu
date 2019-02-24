@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF">
 
+        <!--搜索框-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,14 +19,101 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/shouye_linear_shape"
+                android:background="@drawable/shape_linear"
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <SearchView
+                <LinearLayout
+                    android:id="@+id/shouye_search_linear"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:clickable="true"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/community_editor_ic_feed_ask" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="News日期："
+                        android:textColor="#656565" />
+
+                    <EditText
+                        android:id="@+id/historical_year"
+                        android:paddingRight="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:background="#EBEBEB"
+                        android:gravity="right"
+                        android:textColorHint="#9A9A9A"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="#656565"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年"
+                        android:textColor="#656565"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/historical_month"
+                        android:layout_width="30dp"
+                        android:paddingRight="5dp"
+                        android:layout_height="wrap_content"
+                        android:background="#EBEBEB"
+                        android:gravity="right"
+                        android:textColorHint="#9A9A9A"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:textColor="#656565"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="月"
+                        android:textColor="#656565"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/historical_day"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:background="#EBEBEB"
+                        android:textColorHint="#9A9A9A"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:textColor="#656565"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日"
+                        android:textColor="#656565"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
 
                 <View
                     android:layout_width="1dp"
@@ -43,7 +131,7 @@
                         android:id="@+id/id_picture_ask"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/community_editor_ic_feed_ask" />
+                        android:background="@drawable/ic_search" />
 
                     <TextView
                         android:id="@+id/shouye_ask_textview"
@@ -53,16 +141,14 @@
                         android:layout_alignBottom="@id/id_picture_ask"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="10dp"
-                        android:gravity="right"
-                        android:text="提问"
-                        android:textColor="#656565"
-                        android:textSize="18sp"
                         android:clickable="true"
-                        />
-
+                        android:gravity="right"
+                        android:text="查询"
+                        android:textColor="#656565"
+                        android:textSize="18sp" />
                 </RelativeLayout>
             </LinearLayout>
-        </LinearLayout>
+        </LinearLayout><!--搜索框-->
 
 
         <android.support.design.widget.TabLayout
@@ -73,15 +159,12 @@
             android:layout_marginRight="10dp"
             app:tabIndicatorColor="#1C1C1C"
             app:tabSelectedTextColor="#1C1C1C"
-            app:tabTextColor="#9A9A9A"></android.support.design.widget.TabLayout>
+            app:tabTextColor="#9A9A9A" />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/shouye_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"></android.support.v4.view.ViewPager>
-
+        android:layout_height="match_parent" />
 
 </LinearLayout>
