@@ -3,7 +3,6 @@ package com.example.tree.zhihu.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,14 +12,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.ColumnMessageActivity;
-import com.example.tree.zhihu.GsonClass.ColumnMessage;
-import com.example.tree.zhihu.GsonClass.NewsExtra;
-import com.example.tree.zhihu.MainActivity;
+import com.example.tree.zhihu.activity.ColumnMessageActivity;
+import com.example.tree.zhihu.gson.ColumnMessage;
+import com.example.tree.zhihu.gson.NewsExtra;
 import com.example.tree.zhihu.R;
-import com.example.tree.zhihu.WebContentActivity;
+import com.example.tree.zhihu.activity.WebContentActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ColumnMessgeAdapter extends RecyclerView.Adapter<ColumnMessgeAdapter.ViewHolder> {

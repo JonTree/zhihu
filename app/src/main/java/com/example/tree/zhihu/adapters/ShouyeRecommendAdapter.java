@@ -14,11 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.GsonClass.News;
-import com.example.tree.zhihu.GsonClass.NewsExtra;
-import com.example.tree.zhihu.MainActivity;
+import com.example.tree.zhihu.gson.News;
+import com.example.tree.zhihu.gson.NewsExtra;
+import com.example.tree.zhihu.activity.MainActivity;
 import com.example.tree.zhihu.R;
-import com.example.tree.zhihu.WebContentActivity;
+import com.example.tree.zhihu.activity.WebContentActivity;
 
 import java.util.List;
 

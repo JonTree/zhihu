@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.GsonClass.LongComment;
-import com.example.tree.zhihu.GsonClass.ShortComment;
+import com.example.tree.zhihu.gson.LongComment;
+import com.example.tree.zhihu.gson.ShortComment;
 import com.example.tree.zhihu.R;
 
 import java.util.List;

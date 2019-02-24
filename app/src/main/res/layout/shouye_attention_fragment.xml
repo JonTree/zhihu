@@ -37,42 +37,6 @@
                     android:indeterminateDrawable="@drawable/loading" />
             </LinearLayout>
 
-            <android.support.design.widget.AppBarLayout
-                android:background="#FFFFFF"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:gravity="center"
-                        android:text="发现更多感兴趣的人"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <ImageView
-                        android:background="@drawable/community_ic_gray_text"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_margin="15dp"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp" />
-
-                </RelativeLayout>
-            </android.support.design.widget.AppBarLayout>
 
             <View
                 android:layout_width="match_parent"

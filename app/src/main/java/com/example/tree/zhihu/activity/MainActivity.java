@@ -1,4 +1,4 @@
-package com.example.tree.zhihu;
+package com.example.tree.zhihu.activity;
 
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
@@ -14,6 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.fragment.IdearFragment;
 import com.example.tree.zhihu.fragment.ShouyeFragment;
 import com.example.tree.zhihu.tool.StatusBarUtil;

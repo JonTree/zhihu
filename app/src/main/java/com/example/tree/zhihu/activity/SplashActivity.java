@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.MainActivity;
 import com.example.tree.zhihu.R;
 
 public class SplashActivity extends AppCompatActivity {

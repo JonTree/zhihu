@@ -1,6 +1,5 @@
-package com.example.tree.zhihu.GsonClass;
+package com.example.tree.zhihu.gson;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class News {

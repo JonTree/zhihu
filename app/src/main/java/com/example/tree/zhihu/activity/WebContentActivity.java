@@ -1,4 +1,4 @@
-package com.example.tree.zhihu;
+package com.example.tree.zhihu.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.fragment.IdearFragment;
 import com.example.tree.zhihu.fragment.WebContentFragment;
 import com.example.tree.zhihu.tool.StatusBarUtil;

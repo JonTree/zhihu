@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.framentColumnMessageActivitya;
+package com.example.tree.zhihu.fragment;
 
 import android.graphics.Bitmap;
 import android.icu.text.SimpleDateFormat;
@@ -18,13 +18,12 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.ColumnMessageActivity;
+import com.example.tree.zhihu.activity.ColumnMessageActivity;
 import com.example.tree.zhihu.gson.ColumnMessage;
 import com.example.tree.zhihu.gson.News;
 import com.example.tree.zhihu.gson.NewsExtra;
 import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.adapters.ColumnMessgeAdapter;
-import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
 import com.example.tree.zhihu.tool.BasePageFragment;
 import com.example.tree.zhihu.tool.GetConnected;
 import com.example.tree.zhihu.tool.LocalCache;

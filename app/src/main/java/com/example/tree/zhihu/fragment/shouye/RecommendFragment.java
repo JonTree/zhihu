@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.fragment.shouyeFrament;
+package com.example.tree.zhihu.fragment.shouye;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -30,9 +30,9 @@ import android.widget.ViewFlipper;
 import com.example.tree.zhihu.gson.News;
 import com.example.tree.zhihu.gson.NewsExtra;
 import com.example.tree.zhihu.gson.ShortComment;
-import com.example.tree.zhihu.MainActivity;
+import com.example.tree.zhihu.activity.MainActivity;
 import com.example.tree.zhihu.R;
-import com.example.tree.zhihu.WebContentActivity;
+import com.example.tree.zhihu.activity.WebContentActivity;
 import com.example.tree.zhihu.adapters.ShouyeRecommendAdapter;
 import com.example.tree.zhihu.tool.BasePageFragment;
 import com.example.tree.zhihu.tool.GetConnected;

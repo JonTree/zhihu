@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.fragmentMainActivity;
+package com.example.tree.zhihu.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -20,9 +20,9 @@ import android.widget.Toast;
 
 import com.example.tree.zhihu.gson.News;
 import com.example.tree.zhihu.R;
-import com.example.tree.zhihu.fragmentMainActivity.shouyeFrament.AttentionFragment;
-import com.example.tree.zhihu.fragmentMainActivity.shouyeFrament.HotListFragment;
-import com.example.tree.zhihu.fragmentMainActivity.shouyeFrament.RecommendFragment;
+import com.example.tree.zhihu.fragment.shouye.AttentionFragment;
+import com.example.tree.zhihu.fragment.shouye.HotListFragment;
+import com.example.tree.zhihu.fragment.shouye.RecommendFragment;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

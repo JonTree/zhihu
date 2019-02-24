@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.fragmentWebContentActivity;
+package com.example.tree.zhihu.fragment;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.example.tree.zhihu.gson.News;
 import com.example.tree.zhihu.gson.NewsContent;
 import com.example.tree.zhihu.R;
-import com.example.tree.zhihu.WebContentActivity;
+import com.example.tree.zhihu.activity.WebContentActivity;
 import com.example.tree.zhihu.tool.BasePageFragment;
 import com.example.tree.zhihu.tool.GetConnected;
 import com.google.gson.Gson;
