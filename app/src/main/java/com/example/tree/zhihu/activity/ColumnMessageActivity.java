@@ -15,8 +15,8 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
-import com.example.tree.zhihu.framentColumnMessageActivitya.ColumnMessageFragment;
+import com.example.tree.zhihu.fragment.IdearFragment;
+import com.example.tree.zhihu.fragment.ColumnMessageFragment;
 import com.example.tree.zhihu.tool.StatusBarUtil;
 
 import java.util.ArrayList;

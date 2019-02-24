@@ -1,4 +1,4 @@
-package com.example.tree.zhihu;
+package com.example.tree.zhihu.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.example.tree.zhihu.MainActivity;
+import com.example.tree.zhihu.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -47,7 +50,7 @@ public class SplashActivity extends AppCompatActivity {
                     message1.what = 2;
                     handler.sendMessage(message1);
                     sleep(1000);
-                    Intent it=new Intent(getApplicationContext(),MainActivity.class);//启动MainActivity
+                    Intent it=new Intent(getApplicationContext(), MainActivity.class);//启动MainActivity
                     startActivity(it);
                     finish();//关闭当前活动
                 }catch (Exception e){

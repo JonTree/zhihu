@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.fragmentMainActivity.shouyeFrament;
+package com.example.tree.zhihu.fragment.shouyeFrament;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -13,7 +13,6 @@ import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -28,14 +27,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.example.tree.zhihu.GsonClass.News;
-import com.example.tree.zhihu.GsonClass.NewsExtra;
-import com.example.tree.zhihu.GsonClass.ShortComment;
+import com.example.tree.zhihu.gson.News;
+import com.example.tree.zhihu.gson.NewsExtra;
+import com.example.tree.zhihu.gson.ShortComment;
 import com.example.tree.zhihu.MainActivity;
 import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.WebContentActivity;
 import com.example.tree.zhihu.adapters.ShouyeRecommendAdapter;
-import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
 import com.example.tree.zhihu.tool.BasePageFragment;
 import com.example.tree.zhihu.tool.GetConnected;
 import com.example.tree.zhihu.tool.LocalCache;

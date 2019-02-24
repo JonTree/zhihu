@@ -5,7 +5,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +14,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
-import com.example.tree.zhihu.fragmentMainActivity.ShouyeFragment;
+import com.example.tree.zhihu.fragment.IdearFragment;
+import com.example.tree.zhihu.fragment.ShouyeFragment;
 import com.example.tree.zhihu.tool.StatusBarUtil;
 
 import java.util.ArrayList;

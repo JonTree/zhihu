@@ -1,6 +1,5 @@
 package com.example.tree.zhihu.framentColumnMessageActivitya;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
@@ -13,18 +12,16 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.tree.zhihu.ColumnMessageActivity;
-import com.example.tree.zhihu.GsonClass.ColumnMessage;
-import com.example.tree.zhihu.GsonClass.News;
-import com.example.tree.zhihu.GsonClass.NewsExtra;
+import com.example.tree.zhihu.gson.ColumnMessage;
+import com.example.tree.zhihu.gson.News;
+import com.example.tree.zhihu.gson.NewsExtra;
 import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.adapters.ColumnMessgeAdapter;
 import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
@@ -39,7 +36,6 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 public class ColumnMessageFragment extends BasePageFragment {
 

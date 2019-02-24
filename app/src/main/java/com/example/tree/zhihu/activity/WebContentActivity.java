@@ -1,9 +1,6 @@
 package com.example.tree.zhihu;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,22 +12,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.tree.zhihu.GsonClass.News;
-import com.example.tree.zhihu.GsonClass.NewsContent;
-import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
-import com.example.tree.zhihu.fragmentWebContentActivity.WebContentFragment;
-import com.example.tree.zhihu.framentColumnMessageActivitya.ColumnMessageFragment;
-import com.example.tree.zhihu.tool.GetConnected;
+import com.example.tree.zhihu.fragment.IdearFragment;
+import com.example.tree.zhihu.fragment.WebContentFragment;
 import com.example.tree.zhihu.tool.StatusBarUtil;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;

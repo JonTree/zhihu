@@ -16,11 +16,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.example.tree.zhihu.GsonClass.LongComment;
-import com.example.tree.zhihu.GsonClass.ShortComment;
+import com.example.tree.zhihu.gson.LongComment;
+import com.example.tree.zhihu.gson.ShortComment;
 import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.adapters.IdearAdapter;
 import com.example.tree.zhihu.tool.BasePageFragment;

@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.GsonClass;
+package com.example.tree.zhihu.gson;
 
 import java.util.List;
 

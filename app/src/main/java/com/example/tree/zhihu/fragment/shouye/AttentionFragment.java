@@ -1,4 +1,4 @@
-package com.example.tree.zhihu.fragmentMainActivity.shouyeFrament;
+package com.example.tree.zhihu.fragment.shouyeFrament;
 
 import android.Manifest;
 import android.content.Context;
@@ -15,7 +15,6 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,12 +24,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.tree.zhihu.ColumnMessageActivity;
-import com.example.tree.zhihu.GsonClass.ColumnOverview;
-import com.example.tree.zhihu.MainActivity;
+import com.example.tree.zhihu.gson.ColumnOverview;
 import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.adapters.ShouyeAttentionAdapter;
-import com.example.tree.zhihu.fragmentMainActivity.IdearFragment;
 import com.example.tree.zhihu.tool.BasePageFragment;
 import com.example.tree.zhihu.tool.GetConnected;
 import com.example.tree.zhihu.tool.LocalCache;

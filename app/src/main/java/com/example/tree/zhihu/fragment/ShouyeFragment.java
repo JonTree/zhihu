@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tree.zhihu.GsonClass.News;
+import com.example.tree.zhihu.gson.News;
 import com.example.tree.zhihu.R;
 import com.example.tree.zhihu.fragmentMainActivity.shouyeFrament.AttentionFragment;
 import com.example.tree.zhihu.fragmentMainActivity.shouyeFrament.HotListFragment;
