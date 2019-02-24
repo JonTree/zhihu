@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <animation-list android:oneshot="false"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar60" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar56" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar52" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar48" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar44" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar40" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar36" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar32" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar36" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar40" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar44" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar48" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar52" />
-    <item android:duration="60" android:drawable="@drawable/ic_progress_bar56" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar60" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar56" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar52" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar48" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar44" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar40" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar36" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar32" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar36" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar40" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar44" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar48" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar52" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar56" />
 </animation-list>

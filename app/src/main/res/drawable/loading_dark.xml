@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar60_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar56_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar52_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar48_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar44_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar40_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar36_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar32_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar36_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar40_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar44_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar48_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar52_dark" />
+    <item android:duration="40" android:drawable="@drawable/ic_progress_bar56_dark" />
+</animation-list>

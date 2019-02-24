@@ -46,6 +46,7 @@ public class IdearFragment extends BasePageFragment {
 
     String responseData;
     String id = null;
+    String mId = "啦啦啦啦"; //防止重复加载
     final int UPDATA_COMMENT = 1;
     final int UPDATA_IMAGE = 2;
 
@@ -114,7 +115,8 @@ public class IdearFragment extends BasePageFragment {
 
     @Override
     public void fetchData() {
-        if (id != null) {
+        if (id != null | id == mId) {
+            mId = id;
             getComment();
         }
     }

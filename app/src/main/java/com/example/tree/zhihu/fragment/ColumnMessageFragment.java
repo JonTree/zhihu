@@ -83,20 +83,6 @@ public class ColumnMessageFragment extends BasePageFragment {
         te_title = (TextView) view.findViewById(R.id.column_message_title);
         recyclerView = (RecyclerView) view.findViewById(R.id.column_message_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        //配置关注页面的nestedScrollView的滑动的事件
-        nestedScrollView = (NestedScrollView) view.findViewById(R.id.column_nested_scroll_view);
-        nestedScrollView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if (((IdearFragment)(((ColumnMessageActivity)getActivity()).getFragmentsList().get(1))).getMId() != null){
-                    if ((scrollY - oldScrollY) > 10) {
-                        mLinearLayout.setVisibility(View.GONE);
-                    } else if ((oldScrollY - scrollY) > 20) {
-                        mLinearLayout.setVisibility(View.VISIBLE);
-                    }
-                }
-            }
-        });
     }
 
     @Override
