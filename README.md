@@ -1,6 +1,6 @@
 # 知乎Pure
 ******
-[启动页面]:zhihu/image/Screenshot_2019-02-25-18-22-35-801_com.example.tr.png
+[启动页面]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-18-22-35-801_com.example.tr.png
 [News界面]:zhihu/image/Screenshot_2019-02-25-18-22-47-567_com.example.tr.png
 [话题界面]:zhihu/image/Screenshot_2019-02-25-18-22-50-605_com.example.tr.png
 [热榜界面]:zhihu/image/Screenshot_2019-02-25-18-23-04-494_com.example.tr.png
