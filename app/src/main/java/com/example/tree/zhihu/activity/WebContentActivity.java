@@ -25,7 +25,6 @@ import java.util.List;
 
 public class WebContentActivity extends AppCompatActivity implements View.OnClickListener{
 
-    String TAG = "WebContentAcitivity";
 
     ViewPager viewPager;
     ImageButton bu_shouye;

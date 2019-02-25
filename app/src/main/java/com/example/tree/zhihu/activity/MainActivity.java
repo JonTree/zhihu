@@ -24,7 +24,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    String TAG = "MainActivity";
 
     ImageButton bu_shouye;
     ImageButton bu_idear;

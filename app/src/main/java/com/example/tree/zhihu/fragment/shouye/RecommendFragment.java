@@ -151,7 +151,6 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
             }
         } else {              //当前有已激活的网络连接
             if (this.isDataInitiated == false||!pastNewsUrl.isEmpty()) {
-                Log.d(TAG, "fetchData: "+pastNewsUrl);
                 /*判断历史News是否为空
                  * 为空就获取当日数据
                  * */
@@ -231,6 +230,8 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
                         getTopViewList();
                     }
                     //开始获取当前news中的额外信息以及图片
+                    bitmaps.clear();
+                    newsExtras.clear();
                     for (int i = 0; i < news.getStories().size(); i++) {
                         responseData = GetConnected.sendRequeestWithOkhttp(News.getNewsExtraUrl(news.getStories().get(i).getId()));
                         //保存Json数据
@@ -333,8 +334,6 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
             }.getType());
             for (int i = 0; i < news.getStories().size(); i++) {
                 responseData = LocalCache.readJsonData(getActivity(), News.getNewsExtraUrl(news.getStories().get(i).getId()));
-                Log.d(TAG, "loadLocalData: "+News.getNewsExtraUrl(news.getStories().get(i).getId()));
-                Log.d(TAG, "loadLocalData: "+responseData);
                 newsExtras.add((NewsExtra) gson.fromJson(responseData, new TypeToken<NewsExtra>() {
                 }.getType()));
                 //获取图片

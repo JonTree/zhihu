@@ -38,7 +38,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AttentionFragment extends BasePageFragment {
-    String TAG = "Attention";
     RecyclerView recyclerView;
     LinearLayout mLinearLayout;
     ProgressBar progressBar;

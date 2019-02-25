@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import static android.content.ContentValues.TAG;
 
 public class LocalCache {
     //获得路径
