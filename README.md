@@ -9,4 +9,6 @@
 [评论加载完成]:zhihu/image/Screenshot_2019-02-25-18-23-29-678_com.example.tr.png
 [未点击具体评论]:zhihu/image/Screenshot_2019-02-25-18-24-26-818_com.example.tr.png
 [Web加载完成]:zhihu/image/Screenshot_2019-02-25-18-23-27-068_com.example.tr.png
-
+[评论赞按钮]:zhihu/image/Screenshot_2019-02-25-22-09-23-928_com.example.tr.png
+[顶部查询]:zhihu/image/Screenshot_2019-02-25-22-09-53-808_com.example.tr.png
+![启动页面]
