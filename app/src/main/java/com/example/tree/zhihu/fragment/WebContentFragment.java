@@ -32,6 +32,7 @@ public class WebContentFragment extends BasePageFragment {
     TextView contentDefaultTitle;
     TextView contentImageSource;
     LinearLayout mLinearLayout;
+    LinearLayout web_no_background;
 
 
     String responseData;
@@ -44,6 +45,7 @@ public class WebContentFragment extends BasePageFragment {
             contentDefaultTitle.setText(newsContent.getTitle());
             contentImageSource.setText(newsContent.getImage_source());
             webView.loadDataWithBaseURL(null, newsContent.getBody(), "txt/html", "utf-8", null);
+            web_no_background.setVisibility(View.GONE);
         }
     };
 
@@ -58,6 +60,7 @@ public class WebContentFragment extends BasePageFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         webView = (WebView) view.findViewById(R.id.content_web_view);
+        web_no_background = (LinearLayout) view.findViewById(R.id.tab_web_no_background);
         mLinearLayout = (LinearLayout)getActivity().findViewById(R.id.bottom_tabs);
         contentImageTitle = (ImageView) view.findViewById(R.id.content_image_title);
         contentDefaultTitle = (TextView) view.findViewById(R.id.content_default_title);

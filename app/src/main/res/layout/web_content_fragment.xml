@@ -81,6 +81,46 @@
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
 
+    <LinearLayout
+        android:id="@+id/tab_web_no_background"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:id="@+id/zhihu_web_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000">
+
+                <ImageView
+                    android:layout_width="286dp"
+                    android:layout_height="189dp"
+                    android:background="@drawable/idear_no_background" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/web_progress"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignBottom="@id/zhihu_web_pic"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/loading_dark" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
 
 
 </FrameLayout>

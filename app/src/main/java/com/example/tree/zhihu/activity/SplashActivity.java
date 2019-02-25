@@ -15,19 +15,6 @@ public class SplashActivity extends AppCompatActivity {
 
     TextView splash_1;
     TextView splash_2;
-    Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what){
-                case 1:
-                    splash_1.setVisibility(View.VISIBLE);
-                    break;
-                case 2:
-                    splash_2.setVisibility(View.VISIBLE);
-                    break;
-            }
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +27,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    sleep(500);//使程序休眠五秒
-                    Message message = new Message();
-                    message.what = 1;
-                    handler.sendMessage(message);
-                    sleep(1000);
-                    Message message1 = new Message();
-                    message1.what = 2;
-                    handler.sendMessage(message1);
-                    sleep(1000);
+                    sleep(3000);//使程序休眠
                     Intent it=new Intent(getApplicationContext(), MainActivity.class);//启动MainActivity
                     startActivity(it);
                     finish();//关闭当前活动
