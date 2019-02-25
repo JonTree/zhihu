@@ -11,8 +11,8 @@
 [Web加载完成]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-18-23-27-068_com.example.tr.png
 [评论赞按钮]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-22-09-23-928_com.example.tr.png
 [顶部查询]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-22-09-53-808_com.example.tr.png
-##启动页面
+## 启动页面
 *******
-因为学长给的知乎Api里面，启动页面的Api似乎不能用，本来我有想过自己去找Api来替代，最后效果并不是很好，所以最后还是舍弃了，决定的简约纯净的App还是特别让人舒心的，后来在开发途中发现了如果把这个我自定义的ProgressBar如果放在这感觉还是很好的，最终效果图就是这样子
-![启动页面]
+* 因为学长给的知乎Api里面，启动页面的Api似乎不能用，本来我有想过自己去找Api来替代，最后效果并不是很好，所以最后还是舍弃了，决定的简约纯净的App还是特别让人舒心的，后来在开发途中发现了如果把这个我自定义的ProgressBar如果放在这感觉还是很好的，最终效果图就是这样子
+> ![启动页面]
 进入
