@@ -42,6 +42,8 @@ public class ColumnMessageFragment extends BasePageFragment {
     TextView te_title;
     LinearLayout mLinearLayout;
     NestedScrollView nestedScrollView;
+    LinearLayout column_no_background;
+
 
 
     ColumnMessage columnMessage;
@@ -59,6 +61,7 @@ public class ColumnMessageFragment extends BasePageFragment {
                 case UPDATE_TITLE:
                     te_title.setText(columnMessage.getName());
                     recyclerView.setAdapter(new ColumnMessgeAdapter(getActivity(), columnMessage, newsExtras, bitmaps));
+                    column_no_background.setVisibility(View.GONE);
                     break;
                 case UPDATA_EXTRA_BITMAP:
                     recyclerView.getAdapter().notifyItemChanged(msg.arg1);
@@ -78,6 +81,7 @@ public class ColumnMessageFragment extends BasePageFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        column_no_background = (LinearLayout) view.findViewById(R.id.tab_column_no_background);
         //找到底部tab的布局
         mLinearLayout = (LinearLayout)getActivity().findViewById(R.id.bottom_tabs);
         te_title = (TextView) view.findViewById(R.id.column_message_title);
