@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,7 @@ public class ShouyeFragment extends BasePageFragment implements View.OnClickList
     EditText historicalMonth;
     EditText historicalDay;
     TextView te_ask;
+    ImageView imageView;
     LinearLayout mLinearLayout;
 
 
@@ -80,6 +82,7 @@ public class ShouyeFragment extends BasePageFragment implements View.OnClickList
         };
         //找到底部tab的布局
         mLinearLayout = (LinearLayout)getActivity().findViewById(R.id.bottom_tabs);
+        imageView = (ImageView)view.findViewById(R.id.id_picture_ask) ;
         historicalDay = (EditText) view.findViewById(R.id.historical_day);
         historicalDay.setOnClickListener(this);
         historicalDay.setOnKeyListener(onKeyListener);
@@ -95,6 +98,7 @@ public class ShouyeFragment extends BasePageFragment implements View.OnClickList
         //查询的按钮
         te_ask = (TextView) view.findViewById(R.id.shouye_ask_textview);
         te_ask.setOnClickListener(this);
+        imageView.setOnClickListener(this);
 
         AttentionFragment attentionFragment = new AttentionFragment();
         RecommendFragment recommendFragment = new RecommendFragment();
@@ -179,6 +183,9 @@ public class ShouyeFragment extends BasePageFragment implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.shouye_ask_textview:
+                queryButtonClickLogic();    //查询按钮点击逻辑
+                break;
+            case R.id.id_picture_ask:
                 queryButtonClickLogic();    //查询按钮点击逻辑
                 break;
             case R.id.historical_year:

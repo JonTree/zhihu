@@ -31,9 +31,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:clickable="true"
+                    android:focusable="true"
                     android:gravity="left|center_vertical"
-                    android:orientation="horizontal"
-                    android:focusable="true">
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:id="@+id/imageView12"
@@ -53,68 +53,80 @@
                         android:text="News日期："
                         android:textColor="#656565" />
 
-                    <EditText
-                        android:id="@+id/historical_year"
-                        android:paddingRight="5dp"
-                        android:layout_width="40dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#EBEBEB"
-                        android:gravity="right"
-                        android:textColorHint="#9A9A9A"
-                        android:inputType="number"
-                        android:maxLength="4"
-                        android:maxLines="1"
-                        android:textColor="#656565"
-                        android:textSize="14sp" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="年"
-                        android:textColor="#656565"
-                        android:textSize="14sp" />
+                        <EditText
+                            android:id="@+id/historical_year"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content"
+                            android:background="#EBEBEB"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:paddingRight="5dp"
+                            android:textColor="#656565"
+                            android:textColorHint="#9A9A9A"
+                            android:textSize="14sp" />
 
-                    <EditText
-                        android:id="@+id/historical_month"
-                        android:layout_width="30dp"
-                        android:paddingRight="5dp"
-                        android:layout_height="wrap_content"
-                        android:background="#EBEBEB"
-                        android:gravity="right"
-                        android:textColorHint="#9A9A9A"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:maxLines="1"
-                        android:textColor="#656565"
-                        android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="年"
+                            android:layout_weight="2"
+                            android:textColor="#656565"
+                            android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="月"
-                        android:textColor="#656565"
-                        android:textSize="14sp" />
+                        <EditText
+                            android:id="@+id/historical_month"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:background="#EBEBEB"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:maxLines="1"
+                            android:paddingRight="5dp"
+                            android:textColor="#656565"
+                            android:textColorHint="#9A9A9A"
+                            android:textSize="14sp" />
 
-                    <EditText
-                        android:id="@+id/historical_day"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:background="#EBEBEB"
-                        android:textColorHint="#9A9A9A"
-                        android:gravity="right"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:maxLines="1"
-                        android:textColor="#656565"
-                        android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="月"
+                            android:layout_weight="2"
+                            android:textColor="#656565"
+                            android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="日"
-                        android:textColor="#656565"
-                        android:textSize="14sp" />
+                        <EditText
+                            android:id="@+id/historical_day"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="#EBEBEB"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:layout_weight="2"
+                            android:maxLines="1"
+                            android:paddingRight="5dp"
+                            android:textColor="#656565"
+                            android:textColorHint="#9A9A9A"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="日"
+                            android:layout_weight="2"
+                            android:textColor="#656565"
+                            android:textSize="14sp" />
+                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -124,32 +136,33 @@
                     android:layout_marginVertical="6dp"
                     android:background="#BFBFBF"></View>
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
                         android:id="@+id/id_picture_ask"
-                        android:layout_width="25dp"
+                        android:layout_width="0dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/ic_search" />
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_search" />
 
                     <TextView
                         android:id="@+id/shouye_ask_textview"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/id_picture_ask"
-                        android:layout_alignBottom="@id/id_picture_ask"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="10dp"
                         android:clickable="true"
                         android:gravity="right"
                         android:text="查询"
                         android:textColor="#656565"
                         android:textSize="18sp" />
-                </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout><!--搜索框-->
 

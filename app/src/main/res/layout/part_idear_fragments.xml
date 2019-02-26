@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="80dp"
+    android:padding="4dp"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:orientation="horizontal">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#FFFFFF">
+    <ImageView
+        android:id="@+id/top_story_pre"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_top_story_pre" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_weight="15"
+        android:layout_height="80dp">
+
 
         <ImageView
             android:id="@+id/top_story_image_title"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -20,97 +33,72 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:layout_weight="1"
             android:clickable="true"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.052"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="今日热点"
-            android:textColor="#0285FF"
-            android:clickable="true"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/top_story_image_title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.03"
-            app:layout_constraintStart_toEndOf="@+id/top_story_image_title"
-            app:layout_constraintTop_toTopOf="@+id/top_story_image_title"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/top_story_title"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:maxLines="2"
-            android:textColor="#000000"
-            android:textSize="13sp"
-            app:layout_constraintBottom_toTopOf="@+id/news_little_view_flipper"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
 
 
-        <ViewFlipper
-            android:id="@+id/news_little_view_flipper"
-            android:layout_width="270dp"
-            android:clickable="true"
-            android:layout_height="wrap_content"
-            android:autoStart="true"
-            android:flipInterval="2000"
-            android:inAnimation="@anim/slide_in_bottom"
-            android:outAnimation="@anim/slide_out_top"
-            app:layout_constraintBottom_toBottomOf="@+id/top_story_image_title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/top_story_title"
-            app:layout_constraintTop_toTopOf="@+id/top_story_image_title"
-            app:layout_constraintVertical_bias="1.0">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:text="今日热点"
+                android:textColor="#0285FF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/top_story_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="top|left"
+                android:layout_weight="3"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:maxLines="2"
+                android:textColor="#000000"
+                android:textSize="13sp" />
 
 
-        </ViewFlipper>
-    </android.support.constraint.ConstraintLayout>
+            <ViewFlipper
+                android:id="@+id/news_little_view_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:autoStart="true"
+                android:clickable="true"
+                android:flipInterval="2000"
+                android:inAnimation="@anim/slide_in_bottom"
+                android:outAnimation="@anim/slide_out_top">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
 
-        <ImageView
-            android:id="@+id/top_story_pre"
-            android:layout_width="50dp"
-            android:layout_height="0dp"
-            android:paddingRight="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_top_story_pre" />
+            </ViewFlipper>
+        </LinearLayout>
+    </LinearLayout>
 
-        <ImageView
-            android:id="@+id/top_story_next"
-            android:layout_width="50dp"
-            android:layout_height="0dp"
-            android:paddingLeft="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_top_story_next" />
-    </android.support.constraint.ConstraintLayout>
-</FrameLayout>
+
+    <ImageView
+        android:id="@+id/top_story_next"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_top_story_next" />
+
+</LinearLayout>
