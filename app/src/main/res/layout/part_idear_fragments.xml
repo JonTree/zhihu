@@ -35,7 +35,7 @@
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:clickable="true"
-            android:scaleType="centerInside"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.052"
