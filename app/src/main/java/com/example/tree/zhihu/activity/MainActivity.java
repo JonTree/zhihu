@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewPager = new ViewPager(MainActivity.this);
         viewPagerLayoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         viewPager.setOffscreenPageLimit(2);
-        viewPager.setId(-12138);
+        viewPager.setId(12138);
         shouyeFragment = new ShouyeFragment();
         idearFragment = new IdearFragment();
         fragmentsList.add(shouyeFragment);
