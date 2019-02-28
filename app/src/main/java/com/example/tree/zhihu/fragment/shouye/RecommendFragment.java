@@ -57,12 +57,15 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
 
 
     News news;
+    News loadNews;
     ShouyeRecommendAdapter shouyeRecommendAdapter;
     NetworkInfo info;
     ShortComment shortComment;
     List<News.TopStoriesBean> top_stories;
     List<NewsExtra> newsExtras = new ArrayList<>();
+    List<NewsExtra> loadNewsExtras = new ArrayList<>();
     List<Bitmap> bitmaps = new ArrayList<>();
+    List<Bitmap> loadBitmaps = new ArrayList<>();
     List<String> shortCommentsList = new ArrayList<>();
 
 
@@ -70,7 +73,6 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
     String newsUrl = "https://news-at.zhihu.com/api/4/news/latest";
     String pastNewsUrl = "";
     String mPastNewsUrl = "啦啦啦啦啦";
-    Boolean isLoadLocalData = false;  //判断是否恢复了本地数据
     final int UPDATE_TITLE = 1;
     final int SHOW_PROGRESS_BAR = 2;
     final int HIDE_PROGRESS_BAR = 3;
@@ -140,27 +142,29 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
         super.onViewCreated(view, savedInstanceState);
         //初始化控件
         init(view);
+        loadLocalData();
     }
 
     @Override
     public void fetchData() {
         if (info == null) {   //当前没有已激活的网络连接（表示用户关闭了数据流量服务，也没有开启WiFi等别的数据服务）
-            if (!isLoadLocalData){
-                loadLocalData();
                 Toast.makeText(getActivity(), "检查网络连接设置", Toast.LENGTH_SHORT).show();
-            }
         } else {              //当前有已激活的网络连接
-            if (this.isDataInitiated == false||!pastNewsUrl.isEmpty()) {
+            if (mPastNewsUrl != newsUrl && mPastNewsUrl != pastNewsUrl) {
                 /*判断历史News是否为空
                  * 为空就获取当日数据
                  * */
+                Log.d(TAG, "fetchData: " + mPastNewsUrl);
+                Log.d(TAG, "fetchData: " + pastNewsUrl);
                 if (pastNewsUrl.isEmpty()) {
                     //获取最新消息
                     getNews(newsUrl, UPDATE_TITLE);
-                } else {
-                    if (mPastNewsUrl != pastNewsUrl)
+                    mPastNewsUrl = newsUrl;
+                } else if (mPastNewsUrl != pastNewsUrl) {
                     getNews(pastNewsUrl, UPDATE_TITLE);
                     mPastNewsUrl = pastNewsUrl;
+                    Log.d(TAG, "fetchData: " + mPastNewsUrl);
+                    Log.d(TAG, "fetchData: " + pastNewsUrl);
                 }
             }
         }
@@ -207,7 +211,7 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
                 news = gson.fromJson(responseData, new TypeToken<News>() {
                 }.getType());
                 /*判断是否存在真的获取了数据*/
-                if (news != null&&!isLoadLocalData) {
+                if (news != null) {
                     /*判断是否需要获取top_story
                     避免用户还没获得当日的新闻就直接查询的历史新闻
                      *  */
@@ -327,20 +331,19 @@ public class RecommendFragment extends BasePageFragment implements View.OnClickL
     public void loadLocalData() {
         //首次启动判断
         if (!LocalCache.readJsonData(getActivity(), newsUrl).isEmpty()){
-            isLoadLocalData = true;
             responseData = LocalCache.readJsonData(getActivity(), newsUrl);
             Gson gson = new Gson();
-            news = gson.fromJson(responseData, new TypeToken<News>() {
+            loadNews = gson.fromJson(responseData, new TypeToken<News>() {
             }.getType());
-            for (int i = 0; i < news.getStories().size(); i++) {
-                responseData = LocalCache.readJsonData(getActivity(), News.getNewsExtraUrl(news.getStories().get(i).getId()));
-                newsExtras.add((NewsExtra) gson.fromJson(responseData, new TypeToken<NewsExtra>() {
+            for (int i = 0; i < loadNews.getStories().size(); i++) {
+                responseData = LocalCache.readJsonData(getActivity(), News.getNewsExtraUrl(loadNews.getStories().get(i).getId()));
+                loadNewsExtras.add((NewsExtra) gson.fromJson(responseData, new TypeToken<NewsExtra>() {
                 }.getType()));
                 //获取图片
-                Bitmap bitmap = LocalCache.getLocalImageCache(news.getStories().get(i).getImages().get(0));
-                bitmaps.add(bitmap);
+                Bitmap bitmap = LocalCache.getLocalImageCache(loadNews.getStories().get(i).getImages().get(0));
+                loadBitmaps.add(bitmap);
             }
-            shouyeRecommendAdapter = new ShouyeRecommendAdapter(getActivity(), news, newsExtras, bitmaps);
+            shouyeRecommendAdapter = new ShouyeRecommendAdapter(getActivity(), loadNews, loadNewsExtras, loadBitmaps);
             recyclerView.setAdapter(shouyeRecommendAdapter);
         }
     }

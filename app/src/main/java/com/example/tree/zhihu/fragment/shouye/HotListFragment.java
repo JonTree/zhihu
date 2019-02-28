@@ -44,13 +44,13 @@ public class HotListFragment extends BasePageFragment {
     ShouyeHotListAdapter shouyeHotListAdapter;
     NewsHotList newsHotList;
     private ConnectivityManager connectivityManager;//用于判断是否有网络
-    Boolean isLoadLocalData = false;  //判断是否恢复了本地数据
     NetworkInfo info;
     List<Bitmap> bitmaps = new ArrayList<>();
     List<NewsExtra> newsExtras = new ArrayList<>();
 
 
     String hotNewsURL = "https://news-at.zhihu.com/api/3/news/hot";
+    String mHotNewsUrl = "lalalalalaala";
     String responseData;
 
     final int UPDATE_TITLE = 1;
@@ -93,19 +93,18 @@ public class HotListFragment extends BasePageFragment {
         super.onViewCreated(view, savedInstanceState);
         //初始化
         init(view);
+        loadLocalData();
     }
 
     @Override
     public void fetchData() {
         if (info == null) {   //当前没有已激活的网络连接（表示用户关闭了数据流量服务，也没有开启WiFi等别的数据服务）
-            if (!isLoadLocalData){
-                loadLocalData();
                 Toast.makeText(getActivity(), "请检查网络设置", Toast.LENGTH_SHORT);
-            }
 
         } else {              //当前有已激活的网络连接
             if (this.isDataInitiated == false) {
                 getHotListNews();
+                mHotNewsUrl = hotNewsURL;
             }
         }
     }
@@ -198,7 +197,6 @@ public class HotListFragment extends BasePageFragment {
 
     public void loadLocalData() {
         if (!LocalCache.readJsonData(getActivity(), hotNewsURL).isEmpty()){
-            isLoadLocalData = true;
             responseData = LocalCache.readJsonData(getActivity(), hotNewsURL);
             Gson gson = new Gson();
             newsHotList = gson.fromJson(responseData, new TypeToken<NewsHotList>() {
