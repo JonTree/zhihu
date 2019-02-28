@@ -1,4 +1,4 @@
-# 知乎Pure
+# 知乎Pure，应用介绍
 ******
 [启动页面]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-18-22-35-801_com.example.tr.png
 [News界面]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-18-22-47-567_com.example.tr.png
@@ -63,5 +63,13 @@
 * 这里的操作也是跟前面说的一模一样，没有任何区别
 
 #### 最后，说明一下，app适配了6.0的权限，有无网络直接加载本地数据的功能，自定义控件应该也算有，自定义一部分是来自网络，自己也有封装几个常用的方法成为一个独立的工具类，大概就是这些。
+
+# 遇到的问题
+*****************
+* 写应用之前我其实连Fragment都不会用   ViewPager是啥都不知道，好吧其实知道，只是不知道怎么用，总觉得是特别高深莫测的东西，但是了解之后还是高深莫测，哈哈哈哈，有语病，最后就决定的没什么了，不废话了，进入正题。
+
+## 问题有以下
+
+* 1.布局布置，刚开始我几乎是完全按照目前知乎来布局的，其中我遇到的问题就是将ScrollView与RecyclerView一起使用的时候，刚开始我本来想实现的效果是给RecyclerView加一个top 或者一个bottom的，然后发现怎么也不行，应为RecyclerView滑动时，ScrollView是不会滑动的，后来查解决办法，可能关键词不对，就直接搜到一些重写RecyclerView的方法，其他也差不多，方法就是自定义一个RecyclerView，将里面的一个返回值改一下，实现将RecyclerView全部Item摊开的效果，这样就自然吧ScrollView撑起来了，后来我发现了一个滑动的ScrollView，NestedScrollView
 
 
