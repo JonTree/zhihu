@@ -1,3 +1,5 @@
+# 寒假考核（不知道接口还能用不，我猜接口挂了）
+**********
 # 知乎Pure，应用介绍
 ******
 [启动页面]:https://github.com/TreeWhoAmI/zhihu/blob/master/image/Screenshot_2019-02-25-18-22-35-801_com.example.tr.png
